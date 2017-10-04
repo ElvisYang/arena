@@ -6,7 +6,6 @@ import {
   BrowserRouter,
 } from 'react-router-dom';
 import { AppContainer } from 'react-hot-loader';
-import reducers from './reducers/index';
 import App from './app';
 
 
@@ -15,7 +14,15 @@ Here we are getting the initial state injected by the server. See routes/index.j
  */
 const initialState = window.__INITIAL_STATE__; // eslint-disable-line
 
-const store = createStore(reducers, initialState);
+function pageState(state = [], action) {
+  switch (action.type) {
+    case 'PAGE':
+      return state.concat([action.text]);
+    default:
+      return state;
+  }
+}
+const store = createStore(pageState, initialState);
 
 /*
 While creating a store, we will inject the initial state we received from the server to our app.

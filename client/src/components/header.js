@@ -1,13 +1,24 @@
 import React from 'react';
-import logo from '../../res/images/logo.png';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { Toolbar, ToolbarTitle, ToolbarGroup, FontIcon } from 'material-ui';
+import FontAwesome from 'react-fontawesome';
 
 const Header = () => (
-  <div style={{ marginTop: 20 }} className="header">
-    <div className="logo">
-      <img src={logo} alt="react logo" />
-    </div>
-    <h1>React Redux Router</h1>
-  </div>
+  <MuiThemeProvider>
+    <Toolbar>
+      <ToolbarTitle text="Arena" />
+      <ToolbarGroup>
+        <FontIcon className="material-icons">
+          settings
+        </FontIcon>
+        <FontIcon>
+          <a href="https://github.com/bee-queue/arena" target="_new">
+            <FontAwesome name="github" />
+          </a>
+        </FontIcon>
+      </ToolbarGroup>
+    </Toolbar>
+  </MuiThemeProvider>
 );
 
 export default Header;

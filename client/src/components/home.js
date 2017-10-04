@@ -1,12 +1,11 @@
 import React from 'react';
-import ListItems from '../containers/list_items';
-import ListItemPreview from '../containers/list_item_preview';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { RaisedButton } from 'material-ui';
 
 const Home = () => (
-  <div className="home">
-    <ListItems />
-    <ListItemPreview />
-  </div>
+  <MuiThemeProvider>
+    <p />
+  </MuiThemeProvider>
 );
 
 export default Home;
