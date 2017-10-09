@@ -1,13 +1,15 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Header from './components/header';
-import Home from './components/home';
+import MainSidebar from './components/mainSidebar';
+import Home from './views/home';
 
 const App = () => (
-  <div>
-    <Header />
-    <Route exact path="/" component={Home} />
-  </div>
+    <div>
+        <Header />
+        <MainSidebar />
+        <Route exact path="/" component={Home} />
+    </div>
 );
 
 export default App;
