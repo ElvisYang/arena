@@ -1,11 +1,8 @@
 import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { RaisedButton } from 'material-ui';
+import BreadCrumbs from '../components/breadcrumbs';
 
 const Home = () => (
-  <MuiThemeProvider>
-    <p />
-  </MuiThemeProvider>
+    <BreadCrumbs />
 );
 
 export default Home;
