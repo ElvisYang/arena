@@ -2,7 +2,6 @@
   "name": "bull-arena",
   "description": "An interactive UI dashboard for Bee Queue",
   "repository": "https://github.com/bee-queue/arena.git",
-  "version": "2.2.0",
   "engines": {
     "node": ">=8.3.0"
   },
@@ -84,5 +83,6 @@
     "react-router",
     "react-router-dom",
     "redux"
-  ]
+  ],
+  "version": "2.2.2"
 }
